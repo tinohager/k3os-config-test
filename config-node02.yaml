@@ -12,8 +12,7 @@ write_files:
     SearchDomains=mynetwork.local
     Domain=mynetwork.local
 
-hostname:
-- k3s-node02
+hostname: k3s-node02
 
 k3os:
   data_sources:
