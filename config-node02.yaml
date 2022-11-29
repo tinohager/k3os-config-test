@@ -1,11 +1,23 @@
 ssh_authorized_keys:
 - github:tinohager
 
+write_files:
+- path: /var/lib/connman/default.config
+  content: |-
+    [service_eth0]
+    Type=ethernet
+    IPv4=10.14.20.181/255.255.0.0/10.14.0.254
+    IPv6=off
+    Nameservers=10.14.0.254
+    SearchDomains=mynetwork.local
+    Domain=mynetwork.local
+
+hostname:
+- k3s-node02
+
 k3os:
   data_sources:
   - cdrom
-  hostname:
-  - k3s-node02
   modules:
   - kvm
   - nvme
