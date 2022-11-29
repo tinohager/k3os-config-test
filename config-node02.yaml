@@ -1,0 +1,25 @@
+ssh_authorized_keys:
+- github:tinohager
+
+k3os:
+  data_sources:
+  - cdrom
+  hostname:
+  - k3s-node02
+  modules:
+  - kvm
+  - nvme
+  sysctl:
+    kernel.printk: "4 4 1 7"
+    kernel.kptr_restrict: "1"
+  dns_nameservers:
+  - 8.8.8.8
+  - 1.1.1.1
+  ntp_servers:
+  - 0.us.pool.ntp.org
+  - 1.us.pool.ntp.org
+  password: S6MVAcfUKuOzNKt0343dsfs
+  server_url: https://k3s-node01:6443
+  token: OzN34OzN3eOzN
+  k3s_args:
+  - agent
